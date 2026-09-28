@@ -1,0 +1,37 @@
+# Robots.txt for Harry Taxi Services (https://harrytaxiservices.com)
+# Generated: 2026-09-27
+
+User-agent: *
+Allow: /
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Disallow: /thank-you/
+
+# Explicitly allow major search and AI crawlers
+User-agent: Googlebot
+Allow: /
+Disallow: /thank-you/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /thank-you/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /thank-you/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /thank-you/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /thank-you/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /thank-you/
+
+# Canonical XML Sitemap
+Sitemap: https://harrytaxiservices.com/sitemap.xml

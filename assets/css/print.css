@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Print Stylesheet - Spiti & Kinnaur Circuit & Itineraries
+   Optimized for Clean A4 / PDF Printing & Sharing
+   ========================================================================== */
+
+@media print {
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  /* Hide web interactive elements */
+  .top-notice-strip,
+  .site-header,
+  .mobile-sticky-bar,
+  .site-footer,
+  .btn,
+  .nav-toggle-btn,
+  .map-facade-container,
+  .header-cta-btn,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Printable Header */
+  .print-only-header {
+    display: block !important;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .print-only-header h1 {
+    font-size: 18pt;
+    margin: 0 0 5px 0;
+  }
+
+  .print-only-header p {
+    font-size: 9pt;
+    margin: 0;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Page Break Rules */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .day-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border: 1px solid #999999 !important;
+    margin-bottom: 12px !important;
+    padding: 10px !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1px solid #333333 !important;
+    padding: 4px 6px !important;
+    font-size: 9pt !important;
+  }
+
+  .advisory-box {
+    page-break-inside: avoid;
+    border: 1px solid #666666 !important;
+    padding: 8px !important;
+    margin-top: 15px !important;
+  }
+
+  /* Print URLs on links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+  }
+
+  /* Don't show URL for anchors or internal relative paths */
+  a[href^="#"]::after,
+  a[href^="/"]::after {
+    content: "";
+  }
+}
+
+.print-only-header {
+  display: none;
+}
